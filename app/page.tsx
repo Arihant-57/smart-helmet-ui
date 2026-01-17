@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import { ShieldCheck, Wifi, AlertTriangle, MapPin } from "lucide-react";
 
-const BACKEND_URL = "http://10.195.180.188:5001";
+const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL!;
+
 
 export default function Home() {
   const [crash, setCrash] = useState(false);
